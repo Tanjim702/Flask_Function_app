@@ -1,0 +1,34 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+<style>
+    .result{
+        display: flex;
+        align-items: center;
+    }
+</style>
+<div>
+    <h2>
+        Plug in 1,2,3... and see for yourself
+    </h2>
+    <h6>Hey {{name_of_user}} the formula for the sequence you gave is: </h6>
+    <p>
+        {% if isLong%}
+        <span>It's a bit long , but i'll work</span>
+        {%endif%}
+    </p>
+</div>
+<div class="result">
+    <span>
+        {{finalExp}}
+    </span>
+</div>
+<p>This is the expanded form</p>
+<div class="result">
+    <span>
+        {{finalExpand}}
+    </span>
+</div>
+<div>
+</div>
+{% endblock body %}

@@ -1,0 +1,31 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+<style>
+  textarea{
+    height: 30vh;
+  }
+</style>
+<div class="container">
+  <form method="POST" action="/result-nth-term">
+    <div class="row">
+      <div class="twelve columns">
+        <label for="exampleEmailInput">Your Name</label>
+        <input spellcheck="false" class="u-full-width" type="text" placeholder="Name" id="exampleEmailInput"
+          name="name_of_user">
+      </div>
+    </div>
+    <label for="exampleMessage">Numbers</label>
+    <textarea class="u-full-width"
+      placeholder="Input the numbers separated by comma you'd like get the formula for.For example 8,16,0,-64,-200,-432"
+      id="exampleMessage" name="numbers"></textarea>
+    <input class="button-primary" type="submit" value="Submit">
+
+  </form>
+  <p>Algorithm is polynomial based...Though the formula will work,but if the sequence is in any case based on variable
+    as the exponent you'll get a much bigger result</p>
+  <a href="/demo" class="button-primary" style="display: block;">See Demo</a>
+</div>
+
+</div>
+{% endblock body %}
